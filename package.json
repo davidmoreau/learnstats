@@ -1,0 +1,25 @@
+{
+  "name": "stats-textbook",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.32",
+    "next-mdx-remote": "^5.0.0",
+    "plotly.js-dist-min": "^2.35.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-plotly.js": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.57",
+    "@types/react": "^18.3.15",
+    "@types/react-dom": "^18.3.5",
+    "typescript": "^5.7.3"
+  }
+}

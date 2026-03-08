@@ -1,0 +1,33 @@
+---
+title: "Sampling Distributions and the Central Limit Theorem"
+description: "Interactively explore how sample means behave as sample size changes."
+---
+
+In this lesson, the population can be normal, uniform, or skewed. Even when the population is skewed, the distribution of sample means becomes more bell-shaped as sample size `n` increases.
+
+<SamplingCLTDemo />
+
+## Why This Matters
+
+When we estimate a population mean from samples, we rely on the sampling distribution. Its spread is the **standard error of the mean (SEM)**, roughly `SD / sqrt(n)`.
+
+<QuickCheck
+  title="Quick Check: Sampling + CLT"
+  questions={[
+    {
+      prompt: "If sample size n increases, what usually happens to SEM?",
+      options: ["It decreases", "It increases", "It stays exactly constant"],
+      answer: 0
+    },
+    {
+      prompt: "The Central Limit Theorem says the sample mean becomes approximately normal when...",
+      options: ["n is sufficiently large", "the population is always normal", "the sample size is always 2"],
+      answer: 0
+    },
+    {
+      prompt: "For a strongly skewed population, increasing n tends to make the sampling distribution...",
+      options: ["more symmetric", "more skewed", "unchanged in shape"],
+      answer: 0
+    }
+  ]}
+/>

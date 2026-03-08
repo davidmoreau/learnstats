@@ -1,0 +1,33 @@
+---
+title: "Confidence Intervals for a Mean"
+description: "Build many intervals and inspect how often they capture the true mean."
+---
+
+A confidence interval is a procedure, not a probability statement about one fixed interval after it is computed.
+
+<ConfidenceIntervalDemo />
+
+## Key Idea
+
+If you repeatedly sample and build 95% confidence intervals using a valid method, about 95% of those intervals should include the true parameter.
+
+<QuickCheck
+  title="Quick Check: Confidence Intervals"
+  questions={[
+    {
+      prompt: "A 95% confidence level means...",
+      options: ["about 95% of intervals from repeated samples contain the true mean", "this one interval has 95% chance to be correct", "95% of sample points are inside the interval"],
+      answer: 0
+    },
+    {
+      prompt: "Increasing sample size n usually makes intervals...",
+      options: ["narrower", "wider", "unchanged in width"],
+      answer: 0
+    },
+    {
+      prompt: "Raising confidence from 90% to 99% usually makes intervals...",
+      options: ["wider", "narrower", "identical"],
+      answer: 0
+    }
+  ]}
+/>

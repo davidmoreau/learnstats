@@ -1,0 +1,33 @@
+---
+title: "P-hacking and False Positives"
+description: "Simulate how trying many analyses can turn null effects into 'significant' findings."
+---
+
+P-hacking happens when researchers try many analyses and report whichever crosses `p < alpha`. Even with no true effect, selective reporting inflates false positives.
+
+<PHackingDemo />
+
+## Practical Takeaway
+
+Pre-registering the primary outcome and analysis plan helps keep the false positive rate near its nominal target.
+
+<QuickCheck
+  title="Quick Check: P-hacking"
+  questions={[
+    {
+      prompt: "If you test many outcomes and report the smallest p-value, false positives usually...",
+      options: ["increase", "decrease", "stay exactly the same"],
+      answer: 0
+    },
+    {
+      prompt: "A core guardrail against p-hacking is...",
+      options: ["pre-registration", "collecting fewer variables", "always using alpha = 0.20"],
+      answer: 0
+    },
+    {
+      prompt: "Under a true null, nominal alpha = 0.05 means about...",
+      options: ["5% false positives for one planned test", "50% false positives", "0% false positives"],
+      answer: 0
+    }
+  ]}
+/>

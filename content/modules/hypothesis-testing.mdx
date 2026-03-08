@@ -1,0 +1,33 @@
+---
+title: "Hypothesis Testing"
+description: "Simulate p-values, rejection rates, type I error, and power under different truths."
+---
+
+Hypothesis testing asks whether observed data are surprising under a null model.
+
+<HypothesisTestingDemo />
+
+## Key idea
+
+`alpha` is a long-run decision threshold, not the probability your single conclusion is wrong.
+
+<QuickCheck
+  title="Quick Check: Hypothesis Testing"
+  questions={[
+    {
+      prompt: "When the true effect is zero, rejection rate is approximately...",
+      options: ["type I error rate", "power", "effect size"],
+      answer: 0
+    },
+    {
+      prompt: "Power usually increases when...",
+      options: ["sample size increases", "alpha decreases sharply", "noise increases"],
+      answer: 0
+    },
+    {
+      prompt: "A p-value is best interpreted as...",
+      options: ["data extremeness under H0", "probability H0 is true", "effect magnitude"],
+      answer: 0
+    }
+  ]}
+/>

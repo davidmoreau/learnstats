@@ -1,0 +1,35 @@
+---
+title: "Law of Large Numbers"
+description: "Running averages settle down toward the true expected value as trials increase."
+---
+
+The Law of Large Numbers says that, with repeated independent draws, the sample average converges to the true expectation.
+
+<LawOfLargeNumbersDemo />
+
+## Reading the Demo
+
+- The blue curve is the running mean.
+- The red dashed line is the true probability `p`.
+- Early variability is expected; stability improves as trial count grows.
+
+<QuickCheck
+  title="Quick Check: LLN"
+  questions={[
+    {
+      prompt: "The Law of Large Numbers is about...",
+      options: ["long-run convergence of averages", "single-trial certainty", "making all distributions normal"],
+      answer: 0
+    },
+    {
+      prompt: "If you double the number of trials, the running mean typically becomes...",
+      options: ["less noisy", "more random", "exactly equal to p"],
+      answer: 0
+    },
+    {
+      prompt: "LLN requires that samples are typically treated as...",
+      options: ["independent and identically distributed", "all equal", "sorted before averaging"],
+      answer: 0
+    }
+  ]}
+/>

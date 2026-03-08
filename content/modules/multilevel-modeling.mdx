@@ -1,0 +1,33 @@
+---
+title: "Multilevel Modeling"
+description: "Model clustered data and see why effective sample size is smaller than total N."
+---
+
+When data are clustered (students in classrooms, patients in clinics), observations within clusters are correlated.
+
+<MultilevelModelingDemo />
+
+## Key idea
+
+Ignoring clustering can overstate precision and inflate false positives.
+
+<QuickCheck
+  title="Quick Check: Multilevel"
+  questions={[
+    {
+      prompt: "ICC captures...",
+      options: ["within-cluster similarity", "model AIC", "missing data fraction"],
+      answer: 0
+    },
+    {
+      prompt: "As ICC rises with fixed cluster size, effective N usually...",
+      options: ["decreases", "increases", "stays unchanged"],
+      answer: 0
+    },
+    {
+      prompt: "Multilevel models are useful because they...",
+      options: ["respect hierarchical dependence", "require no assumptions", "always increase effect sizes"],
+      answer: 0
+    }
+  ]}
+/>

@@ -1,0 +1,33 @@
+---
+title: "Meta-analysis"
+description: "Aggregate effects across studies and inspect pooled estimates with uncertainty."
+---
+
+Meta-analysis combines evidence across studies. Precision-weighted pooling gives more influence to studies with smaller standard errors.
+
+<MetaAnalysisDemo />
+
+## Practical Takeaway
+
+A pooled estimate can be more stable than single studies, but heterogeneity matters. High `I²` suggests real between-study differences.
+
+<QuickCheck
+  title="Quick Check: Meta-analysis"
+  questions={[
+    {
+      prompt: "In a fixed-effect style pool, higher-weight studies are typically those with...",
+      options: ["smaller standard errors", "larger p-values", "more skewed outcomes"],
+      answer: 0
+    },
+    {
+      prompt: "I² is commonly used to summarize...",
+      options: ["between-study heterogeneity", "sample size", "publication year"],
+      answer: 0
+    },
+    {
+      prompt: "A pooled estimate mostly helps by...",
+      options: ["combining information to reduce noise", "eliminating all bias", "making all studies identical"],
+      answer: 0
+    }
+  ]}
+/>

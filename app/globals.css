@@ -1,0 +1,121 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #0f766e;
+  --border: #dbe2ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.demo-shell {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.demo-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .demo-layout {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #fafbfd;
+}
+
+.control {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.control label {
+  font-size: 0.92rem;
+}
+
+.interpretation {
+  margin-top: 0.75rem;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fbfffe;
+}
+
+.quickcheck {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1rem;
+}
+
+.quickcheck fieldset {
+  border: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.feedback {
+  font-size: 0.9rem;
+  color: var(--muted);
+}

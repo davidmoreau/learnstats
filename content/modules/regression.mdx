@@ -1,0 +1,33 @@
+---
+title: "Regression (Simple and Multiple)"
+description: "Explore omitted variable bias and coefficient recovery with multiple predictors."
+---
+
+Regression estimates associations between predictors and outcomes. Multiple regression helps isolate partial effects when predictors are correlated.
+
+<RegressionDemo />
+
+## Key idea
+
+When relevant predictors are omitted and correlated with included ones, simple regression coefficients can be biased.
+
+<QuickCheck
+  title="Quick Check: Regression"
+  questions={[
+    {
+      prompt: "Multiple regression helps by...",
+      options: ["estimating partial effects", "removing all confounding automatically", "making predictors independent"],
+      answer: 0
+    },
+    {
+      prompt: "Omitted variable bias is larger when omitted predictors are...",
+      options: ["related to both Y and included X", "unrelated to everything", "constant"],
+      answer: 0
+    },
+    {
+      prompt: "A regression coefficient is best viewed as...",
+      options: ["expected change in Y per unit X (holding others fixed)", "a correlation matrix entry", "the sample mean"],
+      answer: 0
+    }
+  ]}
+/>

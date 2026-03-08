@@ -1,0 +1,35 @@
+---
+title: "ANOVA, ANCOVA, and RM-ANOVA"
+description: "Compare designs for mean differences with covariates and repeated measurements."
+---
+
+ANOVA-family methods compare means across conditions.
+
+<AnovaFamilyDemo />
+
+## Key idea
+
+- ANOVA: between-group mean differences
+- ANCOVA: mean differences after adjusting covariates
+- RM-ANOVA: repeated-measures structure within subjects
+
+<QuickCheck
+  title="Quick Check: ANOVA Family"
+  questions={[
+    {
+      prompt: "ANCOVA mainly extends ANOVA by adding...",
+      options: ["covariate adjustment", "Bayesian priors", "nonparametric ranks only"],
+      answer: 0
+    },
+    {
+      prompt: "RM-ANOVA is useful when measurements are...",
+      options: ["repeated on the same subjects", "all from separate groups", "only binary"],
+      answer: 0
+    },
+    {
+      prompt: "ANOVA F-statistic compares...",
+      options: ["between-condition to within-condition variability", "means to medians", "sample size to alpha"],
+      answer: 0
+    }
+  ]}
+/>

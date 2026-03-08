@@ -1,0 +1,33 @@
+---
+title: "Exploratory Factor Analysis (EFA)"
+description: "Use correlation patterns and eigenvalues to infer latent dimensionality."
+---
+
+EFA looks for a small set of latent factors that explain correlation among observed variables.
+
+<EFADemo />
+
+## Key idea
+
+The scree plot and loading pattern help decide whether one broad factor or multiple factors better represent the data.
+
+<QuickCheck
+  title="Quick Check: EFA"
+  questions={[
+    {
+      prompt: "EFA primarily analyzes...",
+      options: ["covariance/correlation structure", "class labels", "time-to-event hazards"],
+      answer: 0
+    },
+    {
+      prompt: "A scree plot shows...",
+      options: ["eigenvalues by component", "residual histograms", "p-values by test"],
+      answer: 0
+    },
+    {
+      prompt: "High cross-loadings generally make factors...",
+      options: ["less distinct", "more orthogonal automatically", "irrelevant"],
+      answer: 0
+    }
+  ]}
+/>

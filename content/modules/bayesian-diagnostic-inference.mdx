@@ -1,0 +1,33 @@
+---
+title: "Bayesian Inference for Diagnostic Tests"
+description: "Use prevalence, sensitivity, and specificity to interpret positive and negative test results."
+---
+
+Bayes' rule links test accuracy to base rates. If disease is rare, many positive results can still be false positives.
+
+<BayesianDiagnosticDemo />
+
+## Practical Takeaway
+
+Interpret test results with **prevalence** in mind. The same test can have very different PPV across populations.
+
+<QuickCheck
+  title="Quick Check: Diagnostic Bayes"
+  questions={[
+    {
+      prompt: "PPV means...",
+      options: ["P(disease | positive test)", "P(positive test | disease)", "test specificity"],
+      answer: 0
+    },
+    {
+      prompt: "When prevalence is very low, positive tests are often...",
+      options: ["more likely false positives than expected", "always true positives", "unaffected by specificity"],
+      answer: 0
+    },
+    {
+      prompt: "Increasing specificity mainly helps reduce...",
+      options: ["false positives", "true positives", "disease prevalence"],
+      answer: 0
+    }
+  ]}
+/>
