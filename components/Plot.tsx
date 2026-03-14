@@ -1,9 +1,12 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { ComponentType } from "react";
 
-const Plot = dynamic(() => import("react-plotly.js"), {
+const DynamicPlot = dynamic(() => import("react-plotly.js"), {
   ssr: false
-}) as any;
+}) as ComponentType<any>;
 
-export default Plot;
+export default function Plot(props: any) {
+  return <DynamicPlot {...props} />;
+}
