@@ -35,7 +35,7 @@ function zForConfidence(confidence: number) {
 
 function drawPopulationValue(populationType: PopulationType, rand: () => number) {
   if (populationType === "normal") return normalRand(rand);
-  return -1 + -Math.log(Math.max(1e-12, 1 - rand));
+  return -1 + -Math.log(Math.max(1e-12, 1 - rand()));
 }
 
 export function ConfidenceIntervalDemo() {

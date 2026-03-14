@@ -181,7 +181,7 @@ export function AnovaFamilyDemo() {
             }
           ]}
           layout={{
-            title: "Estimated Means by Condition",
+            title: { text: "Estimated Means by Condition" },
             height: 320,
             margin: { t: 40, r: 10, l: 45, b: 45 },
             yaxis: { title: "Mean outcome" },

@@ -6,7 +6,7 @@ import Plot from "@/components/Plot";
 import { useDebouncedValue } from "@/components/useDebouncedValue";
 import { hashSeed, mulberry32, normalRand } from "@/lib/random";
 
-function normalCdf(x: number) {
+function normalCdf(x: number): number {
   const b1 = 0.319381530;
   const b2 = -0.356563782;
   const b3 = 1.781477937;
