@@ -10,23 +10,24 @@ type Question = {
 
 type QuickCheckProps = {
   title?: string;
-  questions: Question[];
+  questions?: Question[];
 };
 
 export function QuickCheck({ title = "Quick Check", questions }: QuickCheckProps) {
+  const safeQuestions = Array.isArray(questions) ? questions : [];
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const correctCount = useMemo(
     () =>
-      questions.reduce((acc, q, idx) => {
+      safeQuestions.reduce((acc, q, idx) => {
         return answers[idx] === q.answer ? acc + 1 : acc;
       }, 0),
-    [answers, questions]
+    [answers, safeQuestions]
   );
 
   return (
     <section className="quickcheck">
       <h3>{title}</h3>
-      {questions.map((q, idx) => {
+      {safeQuestions.map((q, idx) => {
         const selected = answers[idx];
         const hasAnswer = selected !== undefined;
         const isCorrect = hasAnswer && selected === q.answer;
@@ -54,7 +55,7 @@ export function QuickCheck({ title = "Quick Check", questions }: QuickCheckProps
       })}
 
       <p className="feedback">
-        Score this session: {correctCount}/{questions.length}
+        Score this session: {correctCount}/{safeQuestions.length}
       </p>
     </section>
   );

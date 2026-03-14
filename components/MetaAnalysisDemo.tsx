@@ -24,11 +24,12 @@ export function MetaAnalysisDemo() {
   const config = useDebouncedValue({ numStudies, trueEffect, heterogeneity, seed }, 250);
 
   const simulation = useMemo(() => {
+    const safeNumStudies = Number.isFinite(config.numStudies) ? Math.max(1, Math.floor(config.numStudies)) : 1;
     const seedNumber = hashSeed(config.seed);
     const rand = mulberry32(seedNumber);
 
     const studies: StudyResult[] = [];
-    for (let i = 0; i < config.numStudies; i += 1) {
+    for (let i = 0; i < safeNumStudies; i += 1) {
       const se = 0.08 + rand() * 0.35;
       const theta = config.trueEffect + config.heterogeneity * normalRand(rand);
       const observed = theta + se * normalRand(rand);
@@ -43,8 +44,8 @@ export function MetaAnalysisDemo() {
       });
     }
 
-    const sumW = studies.reduce((acc, s) => acc + s.weight, 0);
-    const maxWeight = studies.reduce((acc, s) => Math.max(acc, s.weight), 0);
+    const sumW = studies.reduce((acc, s) => acc + s.weight, 0) || 1;
+    const maxWeight = studies.reduce((acc, s) => Math.max(acc, s.weight), 0) || 1;
     const pooled = studies.reduce((acc, s) => acc + s.weight * s.effect, 0) / sumW;
     const pooledSe = Math.sqrt(1 / sumW);
 
